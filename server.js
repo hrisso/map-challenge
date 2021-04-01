@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 });
 
 // GET data at nth index and increment n to return each location set 1 at a time
+// Assuming solar farm id = 1 - otherwise would use a slug
 let n = 1
 
 app.get('/api/v1/solar_farms/1/technicians', (req, res) => {
