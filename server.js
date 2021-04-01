@@ -17,14 +17,15 @@ app.get('/', (req, res) => {
   res.send("This is root!");
 });
 
+// GET data at nth index and increment n to return each location set 1 at a time
 let n = 1
 
 app.get('/api/v1/solar_farms/1/technicians', (req, res) => {
-  const farm = data.find(farm => farm.features[0].properties.id === n)
-  if (n < 16) {
+  const techs = data[n]
+  if (n < 15) {
     n += 1
   } else {
     n = 1
   }
-  res.json(farm)
+  res.json(techs)
 });
