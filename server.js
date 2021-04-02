@@ -23,7 +23,7 @@ let n = 1
 
 app.get('/api/v1/solar_farms/:id/technicians', (req, res) => {
   const techs = data[n]
-  if (n < 15) {
+  if (n < data.length - 1) {
     n += 1
   } else {
     n = 1
